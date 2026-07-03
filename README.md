@@ -27,7 +27,7 @@ KerML 的产生，本来是为了解决 UML 长期依赖存在的根本问题，
 目前，MOF 和 UML 的关系如下图：
 
 <p align="center">
-  <img src="img/mof-and-uml.png" alt="MOF 和 UML 的关系" style="width:280;" />
+  <img src="img/mof-and-uml.png" alt="MOF 和 UML 的关系" style="width:220;" />
 </p>
 
 
@@ -35,7 +35,7 @@ KerML 的产生，本来是为了解决 UML 长期依赖存在的根本问题，
 目前 OMG 各建模语言规范的关系如下图：
 
 <p align="center">
-  <img src="img/current-ml-specs.png" alt="当前 OMG 建模语言标准" style="width:400;" />
+  <img src="img/current-ml-specs.png" alt="当前 OMG 建模语言标准" style="width:320;" />
 </p>
 
 
@@ -44,7 +44,7 @@ KerML 的产生，本来是为了解决 UML 长期依赖存在的根本问题，
 理想状态下，MOF 和 KerML 的关系应该如下图：
 
 <p align="center">
-  <img src="img/idea-mof-and-kerml.png" alt="MOF 和 KerML 的理想关系" style="width:280;" />
+  <img src="img/idea-mof-and-kerml.png" alt="MOF 和 KerML 的理想关系" style="width:220;" />
 </p>
 
 
@@ -52,7 +52,7 @@ KerML 的产生，本来是为了解决 UML 长期依赖存在的根本问题，
 理想状态下，各建模语言规范的关系应如下图：
 
 <p align="center">
-  <img src="img/idea-ml-spec.png" alt="当前 OMG 建模语言标准" style="width:600;" />
+  <img src="img/idea-ml-spec.png" alt="当前 OMG 建模语言标准" style="width:480;" />
 </p>
 
 
