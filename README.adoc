@@ -1,0 +1,64 @@
+= NeoMLs
+:sectnums:
+:sectnumlevels: 8
+
+**一组基于 KerML 的新一代建模语言。其直接目的是为 AI 驱动的软件工程提供文本化的模型表示法。**
+  
+我们将基于 KerML 重新构建 MOF、KerML、UML 及其他建模语言。一旦 OMG 官方正式发布了基于 KerML 的原生标准，本项目的历史使命就完成了 ：）
+
+
+== 问题
+
+基于 AI 的软件工程，需要一种**文本化**的软件模型表示法。
+
+软件建模的主要目的是在开发复杂软件的过程中进行有效沟通。不论人与人之间还是人与 AI 之间，这都是要解决的核心问题。
+
+目前，软件模型的标准表示法是图形化的 UML。尽管图形化表示法便于人类理解，但无法高效地与 AI 沟通。
+
+因此，**需要一种与UML图形表示法等价的文本化表示法。**
+
+== 现状
+
+=== OMG 官方现状
+
+XMI是一种将 UML 序列化为文本的官方标准，其目是为了进行进行数据交换，不适合作为建模工具使用。
+
+2025年9月发布的 KerML 和 SysML v2 都是基于文本的。理想情况下，OMG 应该基于 KerML 重建 UML，但是至今并没有这么做。所以，UML 仍然缺乏标准的文本化表示法。
+
+要理解 OMG 的建模语言体系，首先要了解 MOF 和 UML 的关系。如下图：
+
+image::img/mof-and-uml.png[alt="MOF 和 UML 的关系", width=220, align=center]
+
+* MOF 全称是。。。 OMG 用于描述元模型的“元元模型”的规范。UML元模型就是用 MOF 描述的。那么，OMG 自身有时用什么描述的呢？答案是 UML。事实上，MOF 包括了 UML 的一个很小的子集，以及少许专用于元元模型的特有内容。这个小子集是 UML 类图的一部分，已经足以描述 MOF 自身以及以 MOF 为基础的所有元模型了。于是可以说 MOF 用自己描述了自己，实现了“自举”（bootstrapping）。
+
+2. 图中的 UML，其实是“UML元模型”的简称。UML 是用 MOF 来描述的。准确地说，UML 是用 MOF 中包含的 UML 子集来描述的。也就是 UML 间接地用自己描述了自己，从而实现了 UML 的“自举”（bootstrapping）。
+
+尽管 UML 和 MOF 互相依赖，但由于 MOF 是元元模型，处于基础层面，因此画在图的下方。UML画在上方，表示基于 MOF 建立的元模型。
+
+目前 OMG 各建模语言规范的关系如下图：
+
+image::img/current-ml-specs.png[alt="当前 OMG 建模语言标准", width=320, align=center]
+
+
+=== 社区尝试
+
+长期以来，社区中已经有多种类似类似的尝试，尽管最初目的不是为了 AI。例如：
+
+* PlantUML
+* Mermaid
+
+这些多数是“文生图”工具。其主要目的是便于绘图不是严谨地建模。因此无法全面准确地表示 UML。
+
+另一方面，由于多数 AI 能比较好地理解 PlantUML 文本。因此，在没有更好的解决方案之前，可以将其作为临时方案。
+
+== 远景
+理想状态下，MOF 和 KerML 的关系应该如下图：
+
+image::img/idea-mof-and-kerml.png[alt="MOF 和 KerML 的理想关系", width=220, align=center]
+
+理想状态下，各建模语言规范的关系应如下图：
+
+image::img/idea-ml-spec.png[alt="当前 OMG 建模语言标准", width=480, align=center]
+
+== 路线图
+bootstrapping
