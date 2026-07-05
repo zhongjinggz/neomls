@@ -35,7 +35,7 @@ XMI是一种将 UML 序列化为文本的官方标准，其目是为了进行进
 
 要理解 OMG 的建模语言体系，首先要了解 MOF 和 UML 的关系。如下图：
 
-image::mof-and-uml.png[alt="MOF 和 UML 的关系", width=220, align="right"]
+image::mof-and-uml.png[alt="MOF 和 UML 的关系", width=220, float="right", align="center"]
 
 * 图中的 UML 指 OMG 的 UML 规范。UML 规范是使用 UML 所建立的软件模型的“元模型”。
 
