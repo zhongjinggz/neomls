@@ -1,7 +1,6 @@
 = NeoMLs
 :sectnums:
 :sectnumlevels: 8
-:imagesdir: img
 
 **一组基于 KerML 的新一代建模语言。其直接目的是为 AI 驱动的软件工程提供文本化的模型表示法。**
   
@@ -37,7 +36,7 @@ XMI是一种将 UML 序列化为文本的官方标准，其目是为了进行进
 
 ++++
 <p align="center">
-  <img src="img/mof-and-uml.png" alt="MOF 和 UML 的关系" width="220" >
+  <img src="img/mof-and-uml.png" width="220" >
 </p>
 ++++
 
@@ -55,7 +54,11 @@ XMI是一种将 UML 序列化为文本的官方标准，其目是为了进行进
 
 明白了 MOF 和 UML 的关系，就容易理解 OMG 各建模语言规范的关系了。如下图：
 
-image::current-ml-specs.png[alt="当前 OMG 建模语言标准", width=320, align=center]
+++++
+<p align="center">
+  <img src="img/current-ml-specs.png" width="220" >
+</p>
+++++
 
 * MOF 是元元模型，用于描述元模型。
 
@@ -111,11 +114,19 @@ image::current-ml-specs.png[alt="当前 OMG 建模语言标准", width=320, alig
 == 远景
 理想状态下，MOF 和 KerML 的关系应该如下图：
 
-image::idea-mof-and-kerml.png[alt="MOF 和 KerML 的理想关系", width=220, align=center]
+++++
+<p align="center">
+  <img src="img/idea-mof-and-kerml.png" width="220" >
+</p>
+++++
 
 理想状态下，各建模语言规范的关系应如下图：
 
-image::idea-ml-spec.png[alt="当前 OMG 建模语言标准", width=480, align=center]
+++++
+<p align="center">
+  <img src="img/idea-ml-spec.png" width="480" >
+</p>
+++++
 
 == 路线图
 bootstrapping
