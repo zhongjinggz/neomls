@@ -8,19 +8,18 @@
   
 基于 KerML 重建 MOF、UML 及 KerML 自身，并可扩展到其他建模语言。一旦 OMG 官方正式发布相应原生标准，本项目将完成其历史使命 ：）
 
-以下各节说明本项目的思路：
+以下各节详述本项目思路：
 
 * **缘起** ：引出项目的直接原因
 * **当下** ：目前官方（OMG）建模语言体系以及社区相关项目
 * **彼岸** ：理想中的建模语言体系
 * **花开** ：路线图，即本项目主要内容
 
-
 == 缘起
 
-开发复杂软件的的核心困难之一在于开发过程中的效沟通，不论人与人之间还是人与 AI 之间。软件建模是解决这一困难的有效手段。
+开发过程中的有效沟通是软件工程的核心困难，不论人与人之间还是人与 AI 之间都是如此（本文所说 AI 均指基于大语言模型的人工智能分支）。软件建模是解决这一困难的主要手段。
 
-目前，软件模型的标准表示法是图形化的 UML。尽管图形化表示法便于人类理解，但无法高效地与 AI 沟通。因此，**需要一种与UML图形表示法等价的文本化建模表示法。**
+目前软件建模的标准表示法是 UML。尽管这种图形化表示法便于人类理解，但与 AI 更高效的沟通方式是文本。因此，**需要一种与UML图形表示法等价的文本化建模表示法。**
 
 == 当下
 
@@ -36,104 +35,104 @@
 </p>
 ++++
 
-* 图中的 MOF 全称是  Meta Object Facility （元对象设施），用于描述其他建模语言（例如 UML）的元模型。因此是一种“元元模型”。MOF 是 OMG 整个建模语言体系的基础,目前版本为 2.5.1 。
+* **https://www.omg.org/spec/UML/[UML] （Unified Modeling Language，统一建模语言）**是面向对象方法学的标准建模语言，当前版本是 2.5.1。一般开发者使用 UML 是为了为软件建立“模型”。而 OMG 的 UML 规范则是描述 UML 自身的模型，是“关于模型的模型”，因此是“元模型”（metamodel）。
 
-* 图中的 UML 指 OMG 的 UML 规范。我们通常学习 UML，目的是为所要开发的软件建立“模型”。而 UML 规范则是描述 UML 自身的模型，是“关于模型的模型”，因此是一种“元模型”, 目前版本也是 2.5.1。事实上，当前版本的 MOF 是在 UML 2.5.1 之后发布的，刻意与 UML 保持了版本的一致。
+* **https://www.omg.org/spec/MOF/[MOF]（Meta-Object Facility，元对象设施）**是用于描述其他建模语言规范（Specification）的规范，当前版本为 2.5.1 。如上文，UML规范是元模型，而 MOF 是用于描述元模型的模型，因此是“元元模型”（meta-metamodel）。MOF 是 OMG 建模语言体系的基础，其他建模语言规范都以 MOF 描述。
 
-*  MOF 由 UML 的一个子集，以及少许专用于元元模型的特有内容组成。这个子集是 UML 类图的一部分。MOF 使用这个 UML 子集来描述自身，因此可以说 MOF 用自己描述了自己，实现了“自举”（bootstrapping）。此外，MOF 中专用于元元模型的特有内容只对建模工具的开发者有意义，并不用于基于它建立的各种元模型规范。
+* MOF 由 UML 的一个子集，以及少许特有内容组成。这个子集是 UML 类模型的一部分。MOF 使用这个 UML 子集来描述自身，因此 MOF 用自己描述了自己，实现了“自举”（bootstrapping）。此外，MOF 中专用于元元模型的特有内容只对建模工具的开发者有意义，并不直接用于描述其他建模语言。
 
-* 图中的 UML 是用 MOF 来描述的。也可以说，UML 是用 MOF 中包含的 UML 子集来描述的。从而， UML 间接地用自己描述了自己，所以 UML 也是自举的。
+* UML 是用 MOF 中包含的 UML 子集来描述的，因此间接地用自己描述了自己，也实现了自举。
 
-* MOF 包含了 UML 子集，所以 MOF 依赖 UML；另一方面，UML 又是由 MOF 所描述的，因此 UML 依赖 MOF。也就是说，MOF 和 UML 是双向依赖的。但由于 MOF 是元元模型，处于基础层面，因此画在图的下方。UML画在上方，表示基于 MOF 来建立。
+* MOF 包含 UML 的子集，所以 MOF 依赖 UML；而 UML 又由 MOF 所描述，因此 UML 依赖 MOF。也就是说 MOF 和 UML 是双向依赖的。但由于 MOF 是元元模型，处于基础地位，因此画在图的下方。
 
-* 由于 UML 具有一定的历史包袱，因此 OMG 另起炉灶，建立了 KerML，并于 2026年9月 正式发布了 1.0 版。KerML 也是由 MOF 描述的，因此单向依赖 MOF。后文会进一步解释 KerML 解决了 UML 的哪些缺陷。
+* 由于 UML 具有一定缺陷，因此 OMG 另起炉灶，建立了 **https://www.omg.org/spec/KerML[KerML]（Kernal Modeling Language，内核建模语言）**，并于 2026年9月正式发布。KerML 也由 MOF 描述，因此依赖 MOF。后文会解释 KerML 解决了 UML 的哪些缺陷。
 
 ==== 当前建模语言体系
 
-明白了 MOF、UML 和 KerML 的关系，就容易理解 OMG 各建模语言规范的关系了。如下图：
+OMG 主要建模语言的关系如下图：
 
 ++++
 <p align="center">
-  <img src="img/current-ml-specs.png" width="400" >
+  <img src="img/current-ml-specs.png" width="380" >
 </p>
 ++++
 
 * MOF 是元元模型，用于描述元模型。
 
-* 用 MOF 描述了 UML 元模型。
+* 用 MOF 描述 UML 元模型。
 
-* 通过使用 Profile 机制，从 UML 中扩展出了 SysML 的第一版的元模型，用于 MBSE（Model-Based System Engineering, 基于模型的系统工程）。UML 一般只用于软件，而基于 SysML 所开发的系统通常既包含软件也包含硬件，例如电动车、卫星、冰箱等等。
+* 通过使用 Profile，从 UML 中扩展出了 https://www.omg.org/spec/SysML/1.5[SysML] （System Modeling Language）的第一版，用于 MBSE（Model-Based System Engineering, 基于模型的系统工程）。UML 一般只用于软件，而 SysML 所描述的系统通常既包含软件也包含硬件，例如汽车、卫星、电视等。
 
-* 建立 SysML 的时候，发现了 UML 的一些缺陷，影响了 SysML 本身的能力。这些缺陷包括：
+* UML 的固有缺陷影响了 SysML 本身的能力。这些缺陷包括：
 
-** UML 的语法是直接用图形来表示的，不像基于文本的语言那样，可以通过形式语言的方式来表达，容易产生歧义。
+** UML 的语法是用图形来表示的，无法像编程语言那样通过形式语言来定义，容易产生歧义；
+** UML 的语义是用自然语言表示的，同样缺乏形式化，容易产生歧义；
+** UML 的行为模型（状态机、活动、交互）之间缺乏统一性；
+** UML 的行为模型和结构模型之间缺乏统一性；
+** UML 元模型的层次过于复杂，有些属于过度设计；
+** UML 的功能过于复杂，从而难以演进。
 
-** UML 的语义是用自然语言表示的，同样缺乏形式化，易产生歧义。
+* 为了解决上述问题，为 SysML 建立坚实的基础，OMG 开发了 KerML。KerML 由 MOF 描述，是一种元模型而不是元元模型。从功能的角度，KerML 和 UML 存在交集；但从内部结构而言，KerML 进行了彻底的重建，包括以下方面：
 
-** UML 的几种行为模型（状态机、活动、交互）之间缺乏统一性和一致性。
+** KerML 的表示法是文本，类似编程语言，通过 EBNF 的变体严格定义；
+** KerML 的语义采用一阶谓词定义，没有歧义；
+** KerML 的行为模型是统一的；
+** KerML 的行为模型和结构模型之间是统一的；
+** KerML 优化了元模型的层次结构，比 UML 更加简洁；
+** KerML 简化了 UML 的原有功能，同时又增加了一些 UML 不具备的抽象和功能，比 UML 更加完善。
 
-** UML 的行为模型和结构模型之间缺乏统一性和一致性。
+* 基于 KerML 扩展出了新的 SysML，也就是 https://www.omg.org/spec/SysML[SysML v2]。尽管仍然叫做 SysML，但与第一版已经大相径庭：
 
-** UML 元模型的层次过于复杂，有些属于过度设计。
-
-** UML 的内容过于驳杂，有些功能极少使用，但增加了 UML 的复杂性，使 UML 难以演进。
-
-* 为了解决上述问题，给 SysML 一个坚实的基础，OMG 发布了 KerML。仅从功能的角度来说，KerML 和 UML 存在交集。但从内部结构而言，KerML 进行了彻底的翻新，包括以下方面：
-
-** KerML 的表示法是文本，类似编程语言，通过 EBNF 的一种变体严格地表示。
-
-** KerML 的语义采用一阶谓词来说明，没有歧义。
-
-** KerML 的行为模型是统一的。
-
-** KerML 的行为模型和结构模型之间是统一的。
-
-** KerML 优化了元模型的层次结构，比 UML 更加合理和简洁。
-
-** KerML 一方面简化了 UML 的功能，将这些功能留给基于 KerML 的更上层的语言来实现；另一方面又增加了一些原来 UML 不具备的抽象和功能，比 UML 更加完善。
-
-** KerML 由 MOF 描述，是一种元模型而不是元元模型。
-
-* 基于 KerML 扩展出了新版的 SysML，也就是 SysML v2。尽管仍然叫做 SysML，但与第一版已经大相径庭。
-** SysML v2 继承了 KerML 的所有优点。
-** SysML v2 的概念和术语都发生了很大变化。
-** 理论上，SysML v1 将会退休，因此图中使用了灰色背景。但会经过比较长的过渡时间。
+** SysML v2 继承了 KerML 的所有优点；
+** SysML v2 的概念和术语发生了很大变化；
+** 理论上 SysML v1 将会逐步退役，因此图中使用灰色背景。
 
 ==== 当前建模语言体系的问题
 
-就整个建模语言体系而言，OMG 目前的状态其实是个半成品，表现在以下方面：
+就整个建模语言体系而言，OMG 目前的状态只是半成品，表现在以下方面：
 
-* KerML 由 MOF 描述，而 MOF 仍然依赖于 UML。因此，KerML 并没有彻底斩断与 UML 的脐带，仍然没有实现自举。
-** 这导致了在 KerML 的规范中，其抽象语法仍然由 UML 表示，而无法用文本表示。而文本化本来就是 KerML 的核心优势之一。
+* KerML 由 MOF 描述，而 MOF 仍然依赖于 UML。因此，KerML 并没有彻底斩断与 UML 的脐带，仍然没有实现自举。这导致了在 KerML 的规范中，其抽象语法仍然由 UML 表示，而无法用文本表示。而文本化本来是 KerML 的核心优势之一。
 
-* OMG 只为 SysML v2 规定了与文本表示相对应的图形表示法，但并没有为 KerML 规定图形表示。理论上，KerML 可以单独用于建模，但没有图形化，则对人类的理解不友好。
+* OMG 为 SysML v2 规定了与文本等价的图形表示法，但并没有为 KerML 规定图形表示。理论上，KerML 可以单独用于建模，但没有图形化，则对人类不友好。
 
 * OMG 并没有基于 KerML 重建 UML。
 
 * 因此，对于软件建模语言而言，面临如下尴尬局面：
-** KerML 缺乏一些必要的机制，例如用例、组件、接口等，并且没有图形化，因此无法代替 UML 用于软件建模。
-** SysML v2 是专为系统工程（而不是软件工程）而设计的，其概念和术语体系与 UML 差别较大，也无法代替UML。
-** UML 具有上文说的缺陷，影响了自身的发展，因此从2017年12月发布 2.5.1 版之后就再没有改进了。而且，没有标准的文本表示法，难以有效地支撑基于 AI 的软件开发。
-** 事实上，官方有一个 XMI 规范，用于将基于 MOF 的模型序列化成 XML，从而进行进行数据交换。尽管这是文本格式，但其目的在于给机器阅读，很难被人类理解，因此也不适合直接作为建模语言使用。
+
+** KerML 缺乏用例、组件、接口等必要机制，并且没有图形化，因此无法代替 UML 用于软件建模；
+** 在 https://www.omg.org/sysml/sysmlv2/[SysML v2] 的网站上提到“预计 SysML v2 也将被软件系统工程师和其他希望利用这一现代开发实践的人所采用（It is also anticipated that SysML v2 will be embraced by software systems engineers and others wishing to leverage this language as part of their modern development practices）”，然而，SysML 的概念和术语体系与 UML 差别巨大，要取而代之实属渺茫；
+** UML 的缺陷影响了自身的发展，字2017年12月的 2.5.1 版后就不再更新；
+** 由于没有标准的文本表示法，UML 难以有效地支撑基于 AI 的软件开发；
+** 官方虽然有基于文本的 XMI 的规范，但其目的是进行进行模型数据交换，便于机器阅读，却难以被人类理解，因此不适合作为建模语言使用。
 
 === 社区尝试
 
-长期以来，社区中已经有多种 UML 的文本表示，尽管最初目的不是为了 AI。例如：
+社区中已经有多种基于文本的 UML 绘图或建模的工具，例如：
 
-**[TODO] 再增加几个例子，加超链接**
+* 绘图工具
 
-* PlantUML
-* Mermaid
+** https://plantuml.com/[PlantUML]
+** https://mermaid.js.org/[Mermaid]
+** https://yuml.me/[yUML]
+** https://www.nomnoml.com/[Nomnoml]
+** https://www.gleek.io/[Gleek]
+** https://www.spinellis.gr/umlgraph/[UMLGraph]
+** https://dotuml.com/[DotUML]
 
-这些多数是“文生图”工具。其主要目的是便于绘图而不是严谨地建模。因此无法全面准确地表示 UML。
+* 建模工具
 
-另一方面，仅从实践的角度，由于多数 AI 能比较好地理解 **PlantUML** 。因此，**在没有更好的解决方案之前，可以将其作为临时方案**。
+** https://cruise.umple.org/umple/[Umple]
+** https://abstratt.github.io/textuml/[textuml]
+** https://github.com/DrMarkusVoss/pumla[pumla]
+
+
+其中最常用的当属 https://plantuml.com/[PlantUML]，而且 AI 也能比较好地理解其文本。因此，**在没有更好的选择之前，不妨将其作为临时方案**。而 https://github.com/DrMarkusVoss/pumla[pumla] 是一种基于 PlantUML 的建模工具，十分有趣。
 
 == 彼岸
 
-为了解决上文所说的问题，我们来畅享一下未来的理想状态。
+为了解决上述问题，不妨畅享一下理想中的的建模语言体系。
 
-=== 理想的 MOF v3 和 KerML v2
+=== 理想中的 MOF v3 和 KerML v2
 
 理想的 MOF 和 KerML 的关系如下图：
 
@@ -143,48 +142,48 @@
 </p>
 ++++
 
-*  MOF 发生的变化如下：
+* 对 MOF 的改进：
 ** 用 KerML 的子集取代原来 UML 的子集；
 ** 用这个子集描述自身，实现自举；
 ** 考虑基于领域驱动设计（DDD）中上下文映射（Context Mapping）的思路，增加基于 MOF 的语言之间的概念映射机制，从而可以使这些语言协同使用；
-** 升级后的版本可称为 MOF v3。
+** 升级后的版本称为 MOF v3。
 
-* KerML 发生的变化如下：
-** 由升级后的 MOF v3 来描述，从而不再间接依赖 UML；
-** 又由于 MOF v3 用于描述 KerML 的手段实际是 KerML 的子集，因此也实现了自举；
-** KerML v2 中也将补充与文本等价的图形表示法；
-** 升级后的版本可称为 KerML v2。
+* 对 KerML 的改进：
+** 由升级后的 MOF v3 来描述，从而彻底抛弃对 UML 的依赖；
+** 又由于 KerML 是由 MOF v3 中 KerML 自身的子集所描述的，因此也实现了自举；
+** 为 KerML 补充与文本等价的图形表示法；
+** 升级后的版本称为 KerML v2。
 
-* 具体而言，MOF v3 和 KerML v2 的描述方式发生了以下共同的变化：
-** 用文本化的方式描述抽象语法；
-** 用 EBNF 描述具体语法；
-** 用一阶谓词描述语义。
+* MOF v3 和 KerML v2 的共同改进：
+** 用文本化的方式描述其抽象语法；
+** 用 EBNF 描述其具体语法；
+** 用一阶谓词描述其语义。
 
-* 在理想状况下，原版 UML 已经退役，因此图中不画出来了。
+* 原版 UML 已经退役，因此图中没有画。
 
-=== 理想的软件语言体系
+=== 理想的建模语言体系
 
 理想状态下，各建模语言规范的关系应如下图：
 
 ++++
 <p align="center">
-  <img src="img/idea-ml-specs.png" width="580" >
+  <img src="img/idea-ml-specs.png" width="550" >
 </p>
 ++++
 
 
-* 尽管 KerML 自身的描述发生了变化，但对上层元模型的表达方式没有发生任何变化，因此，SysML v2 不会发生任何变化。
+* 尽管 KerML 自身的描述发生了变化，但对上层元模型的表达方式没有发生任何改变，因此，SysML v2 并没有变化。
 
-* 通过扩展 KerML 重建 UML，具有以下特点：
+* 通过扩展 KerML 重建的 UML 具有以下特点：
 ** 继承 KerML 的所有优点；
-** 概念和使用习惯上与当前 UML 基本兼容，熟悉 UML 的人容易上手；
+** 术语和使用习惯上与当前 UML 尽量兼容，熟悉 UML 的人容易上手；
 ** 以文本表示为主，同时具有等价的图形表示；
 ** 删除原来 UML 中罕用的功能；
 ** 统一不同的行为模型，以及行为和结构模型；
-** 升级后的 UML 可称为 UML v3。
+** 升级后的 UML 称为 UML v3。
 
 * 其他几种建模语言是想象中的，举例说明基于 MOF 可以创建各种不同的建模语言：
-** PDML（Physical Data Modelling Language, 物理数据建模语言）。用于可视化数据库设计的物理数据模型，类似下面 Power Designer 中的 PDM（物理数据模型）图。
+** PDML（Physical Data Modelling Language, 物理数据建模语言），用于可视化数据库的物理数据模型，下面是 Power Designer 中的 PDM（物理数据模型）图；
 
 ++++
 <p align="center">
@@ -192,70 +191,228 @@
 </p>
 ++++
 
-** ERML（Entity Relationship Modeling Language, 实体关系建模语言）。有了 UML 类图，其实不需要传统的 ER 图了，不过毕竟还有不少人在使用，可以尝试将其纳入统一的建模语言体系。
+** ERML（Entity Relationship Modeling Language, 实体关系建模语言）。有了 UML 类图，其实不需要传统的 ER 图了，不过毕竟还有不少人在使用，可以尝试将其纳入统一的建模语言体系；
 
 ** APIML（API Modeling Languate，API建模语言）。考虑把基于 JSON、YAML、XML、二进制协议的各种API的逻辑描述统一起来。
 
 
 == 花开
 
-在官方有所作为之前，凭社区之力先做探索，以解燃眉之急。需定过渡期路线图，逐步完成。
-恐怕做到退休也做不完。希望 AI 加持下会好一些。
+在官方有所作为之前，凭社区之力先做探索，以解燃眉之急。下面是初步的过渡期路线图。恐怕做到退休也做不完。希望 AI 加持下会好一些。
 
-=== 第一步 （当前位置）
+=== 第一步 VPCLI（当前位置）
 
 ++++
 <p align="center">
-  <img src="img/step1-vpcli.png" width="500" >
+  <img src="img/step1-vpcli.png" width="380" >
 </p>
 ++++
 
 
-=== 第二步
+=== 第二步 NeoUML v1
 
 
 ++++
 <p align="center">
-  <img src="img/step2-neouml-v1.png" width="500" >
+  <img src="img/step2-neouml-v1.png" width="400" >
 </p>
 ++++
 
-=== 第三步
+=== 第三步 NeoMOF & NeoKerML v1
 
 
 ++++
 <p align="center">
-  <img src="img/step3-neomof-neokerml-v1.png" width="900" >
+  <img src="img/step3-neomof-neokerml-v1.png" width="720" >
 </p>
 ++++
 
 
 
-=== 第四步
+=== 第四步 NeoKerML v2
 
 
 ++++
 <p align="center">
-  <img src="img/step4-neokerml-v2.png" width="950" >
+  <img src="img/step4-neokerml-v2.png" width="800" >
 </p>
 ++++
 
-=== 第五步
+=== 第五步 NeoUML v2
 
 ++++
 <p align="center">
-  <img src="img/step5-neouml-v2.png" width="500" >
+  <img src="img/step5-neouml-v2.png" width="420" >
 </p>
 ++++
 
 
-=== 第六步
+=== 第六步 完整的建模语言体系
 
 ++++
 <p align="center">
-  <img src="img/step6-other-ml.png" width="700" >
+  <img src="img/step6-other-ml.png" width="600" >
 </p>
 ++++
 
 
-== 附：OMG 建模语言时间线
+== 附录：OMG 建模语言时间线
+
+
+++++
+<p align="center">
+  <img src="img/a-omg-ml-timeline.png" width="500" >
+</p>
+++++
+
+
+.OMG 建模语言时间线
+[cols="2,1,1, 12"]
+|===
+| 时间 | 语言 | 版本 | 说明
+
+| 1997年12月
+| UML 
+| 1.1
+| **统一建模的开端** +
+  UML 正式标准化，终结建模方法割据，奠定建模产业基础
+
+| 1999年07月 
+| UML 
+| 1.2
+| 小幅迭代
+
+| 2000年02月 
+| UML 
+| 1.3
+| 小幅迭代
+
+| 2001年09月 
+| UML 
+| 1.4
+| *UML 1 的巅峰* +
+  UML 2 前普及度最高的工业稳定版
+
+| 2002年04月 
+| MOF 
+| 1.4
+| *元建模的先声* +
+  首次提供统一元建模框架，是 UML 1 时代工具互操作的基础
+
+| 2003年03月 
+| UML 
+| 1.5
+| *UML 1 的尾声* +
+  UML 1.4 的小幅修订，UML 2 之前的过渡
+
+| 2005年07月 
+| UML 
+| 2.0
+| *软件建模范式的跨越* +
+  建立四层元模型体系，从绘图符号跃升为具有精确语义的可扩展建模平台，成为新一代软件建模的标准
+
+
+| 2006年10月 
+| MOF 
+| 2.0
+| *元建模的底座* +
+  完善 OMG 建模语言体系的“元元模型”顶层规范，奠定 XMI 模型交换能力，新一代建模生态的基石
+
+| 2007年09月 
+| SysML 
+| 1.0
+| *系统工程建模范式的诞生* +
+  为系统工程建模定义统一语言，基于 UML 2 扩展，突破纯软件边界，填补航空、军工、汽车等复杂装备工程空白，催化 MBSE（基于模型的系统工程）生态的形成与发展
+
+| 2007年10月 
+| UML 
+| 2.1.2	
+| 小幅迭代
+
+| 2008年11月 
+| SysML 
+| 1.1
+| 小幅迭代
+
+| 2009年01月 
+| UML 
+| 2.2
+| 小幅迭代
+
+| 2010年05月 
+| UML 
+| 2.3
+| 小幅迭代
+
+| 2010年06月 
+| SysML 
+| 1.2
+| 小幅迭代
+
+| 2011年07月 
+| UML 
+| 2.4.1	
+| 小幅迭代
+
+| 2012年06月 
+| SysML 
+| 1.3
+| 小幅迭代
+
+| 2014年04月 
+| MOF 
+| 2.4.2	
+| 小幅迭代
+
+| 2015年08月 
+| SysML 
+| 1.4
+| 小幅迭代
+
+| 2016年10月 
+| MOF 
+| 2.5.1	
+| *MOF 2 的最新稳定版* +
+  延续 MOF 2.0 的核心架构，至今仍是 OMG 建模语言生态的元模型基础标准
+
+| 2017年05月 
+| SysML 
+| 1.5
+| 小幅迭代
+
+| 2017年12月 
+| UML 
+| 2.5.1	
+| *UML 2 的最新稳定版* + 
+  固化成熟语义、修复历史缺陷、成为业界默认的 UML 2 通用基准
+
+| 2019年12月 
+| SysML 
+| 1.6
+| 小幅迭代
+
+| 2024年06月 
+| SysML 
+| 1.7
+| *SysML 1 的余晖* +
+  新旧范式间的桥梁，是 SysML 2 前的工业稳态版本
+
+| 2025年09月 
+| KerML 
+| 1.0
+| *新一代建模范式的崛起* +
+  基于形式化方法重构建模体系，以纯文本完成模型表示，以数理逻辑定义模型语义，摆脱图形符号依赖，推动建模工程化、版本化和自动化，适配AI智能建模需求，可扩展为其他新一代建模语言
+
+| 2025年09月 
+| SysML 
+| 2.0
+| *系统工程建模的新时代* +
+  基于 KerML 重建，彻底脱离 UML 桎梏，统一文本/图形双范式，开启文本优先，语义精确的系统工程建模新范式
+|===
+
+//// 
+
+SysML v1 users will naturally evolve to using SysML v2. It is also anticipated that SysML v2 will be embraced by software systems engineers and others wishing to leverage this language as part of their modern development practices.
+使用 SysML v1 的用户自然会逐渐过渡到使用 SysML v2。预计 SysML v2 会被软件系统工程师以及其他希望将这种语言融入现代开发实践的人士所采用。
+
+//// 
