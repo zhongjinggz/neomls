@@ -87,6 +87,8 @@ signature_1090897174
 
 
 ----
+## 2023-09-01, Grady Booch
+DOING
 
 **From:** Grady Booch <gbooch@us.ibm.com>
 
@@ -106,6 +108,26 @@ Respectfully, Ivar, I strongly disagree. Furthermore, that POV is precisely what
 
 ----
 
+**发件人：** Grady Booch <gbooch@us.ibm.com>
+
+**日期：** 2023年9月3日 星期日 07:20
+
+**收件人：** Ivar Jacobson <ivar@ivarjacobson.com>、ed-s_modeldriven.com <ed-s@modeldriven.com>、Peter Rivett <pete.rivett@federatedknowledge.com>、Steve Cook <stevecook@hotmail.co.uk>、adtf@omg.org <adtf@omg.org>
+
+**主题：** 回复：UML的未来
+
+“拥有一个具有深层次语义（包括静态和动态）的建模语言，与拥有一个易于使用、支持多种用例且直观易懂的建模语言之间，并无冲突。”
+
+以及
+
+“依我之见，我们必须设计一种在语义深度上经过深思熟虑的语言，但随后只向用户提供恰到好处的部分，以避免仅仅依赖直觉。”
+
+
+恕我直言，Ivar，我强烈反对。而且，正是这种观点在 UML 迈向 2.0 标准的过程中，助长了它的衰落。
+
+----
+## 2023-09-01, Ivar Jacobson
+
 **From:** Ivar Jacobson <ivar@ivarjacobson.com>
 
 **Date:** Friday, September 1, 2023 at 19:25
@@ -113,8 +135,6 @@ Respectfully, Ivar, I strongly disagree. Furthermore, that POV is precisely what
 **To:** ed-s_modeldriven.com <ed-s@modeldriven.com>, Grady Booch <gbooch@us.ibm.com>, Peter Rivett <pete.rivett@federatedknowledge.com>, Steve Cook <stevecook@hotmail.co.uk>, adtf@omg.org <adtf@omg.org>
 
 **Subject:** [EXTERNAL] Re: UML Future
-
-There is no conflict between having a modeling language with deep semantics, both static and dynamic, and having an easy to use modeling language supporting a multitude of use cases and intuitively understandable. The problems arise when it
 
 There is no conflict between having a modeling language with deep semantics, both static and dynamic, and having an easy to use modeling language supporting a multitude of use cases and intuitively understandable.
 
@@ -144,7 +164,45 @@ signature_1090897174
 
 NEW! - Essence for Agility
 
----- 
+----
+
+**发件人：** Ivar Jacobson <ivar@ivarjacobson.com>
+
+**日期：** 2023年9月1日 星期五 19:25
+
+**收件人：** ed-s_modeldriven.com <ed-s@modeldriven.com>、Grady Booch <gbooch@us.ibm.com>、Peter Rivett <pete.rivett@federatedknowledge.com>、Steve Cook <stevecook@hotmail.co.uk>、adtf@omg.org <adtf@omg.org>
+
+**主题：** [外部] 回复：UML的未来
+
+拥有一个具有深层次语义（包括静态和动态）的建模语言，与拥有一个易于使用、支持多种用例且直观易懂的建模语言之间，并无冲突。
+
+问题在于，当一种建模语言语义薄弱时，却期望其具体语法（表示法 notation）—— 无论简单还是丰富 ——必须仅凭直觉就能理解。我们有着不同的直觉。
+
+依我之见，我们必须设计一种在语义深度上经过深思熟虑的语言，但随后只向用户提供恰到好处的部分，以避免仅仅依赖直觉。
+
+Essence 语言就是一个很好的例子，它使用 MOF 进行规范定义。它是半形式化语言的。部分构造具有形式化的定义和清晰的语义。然而，同时也存在已识别的语义缺口，这些可由用户自行填补。Essence 用于描述一系列实践，将这些实践组合成完整的方法，并通过状态演进来激活这些实践。其具体语法非常简单，使用扑克牌大小的卡片，允许用户进行多种严肃游戏。用卡片玩游戏是一种非常流行的表示法，对 Essence 来说并不新鲜。其创新之处在于，传统游戏使用的卡片没有明确定义的含义，这限制了可玩游戏的数量，因为这些游戏必须依赖直觉来理解。Essence 语义的价值在于，它使方法论专家能够设计出大量易于理解的游戏，而如果没有这种语义，这是无法实现的。
+
+我们在构建 Essence 时，心里有一个简单的隐喻（metaphor）：汽车需要发动机，但开车时并不需要对发动机有很深的了解。虽然实践和方法都是基于 Essence 的，但在使用时，并不需要对 Essence 有深入的理解。同样，建模语言应该具备深入但均衡的语义，但在使用时并不需要了解太深。
+
+祝好
+
+Ivar
+
+Ivar Jacobson博士
+
+董事长兼CEO
+
+Ivar Jacobson International
+
++46 70 5901133
+
+www.ivarjacobson.com
+
+signature_1090897174
+
+新品速递 - Essence for Agility
+
+## 2023-09-01, Ed Seidewitz
 
 **From:** Ed Seidewitz <ed-s@modeldriven.com>
 
@@ -166,6 +224,27 @@ And if we can finally achieve a consensus on this, it would also surely be worth
 
 ----
 
+**发件人：** Ed Seidewitz <ed-s@modeldriven.com>
+
+**日期：** 2023年9月1日 星期五 22:23
+
+**收件人：** Grady Booch <gbooch@us.ibm.com>、Peter Rivett <pete.rivett@federatedknowledge.com>、Steve Cook <stevecook@hotmail.co.uk>、Ivar Jacobson <ivar@ivarjacobson.com>、adtf@omg.org <adtf@omg.org>
+
+**主题：** 回复：UML的未来
+
+这正是问题的症结所在。正如我在之前的邮件中所述，也正如 Pete 在他的邮件中更具体阐述的那样，我们至今未能就“简单”到底是什么达成共识。
+
+我完全同意 Grady 的观点，即“一种简单的、更加非正式的建模语言”对于他以及许多其他人在软件架构建模中的目的而言会非常有用。问题在于，为此制定一份 OMG 规范是否真的值得（甚或成为一种阻碍）。正如 Jim Amsden 指出的，目前已有模型草图工具可用，或许应该由市场来决定什么工具适合这个目的。
+
+另一方面，系统工程师在将架构模型交给软件工程师时，无疑会寻求一定程度的严格性。而且，如果你想对模型进行“推导”—— 即使是传统的人工而非自动化推导 —— 如下论点也合理的（！）：你需要一定程度的严格性，或者至少在建模构造背后有一个共同认可的含义，以便在对模型进行推导时能够一致地得出正确的结论。毕竟，这正是“严格性”在数学和科学中发挥重要作用的根本原因。
+
+不过，理想情况下，应该能够定义一种既有严格的基础，又能非正式建模的语言。只需在受众不关心严格性时，不要过于教条就可以了。事实上，科学家甚至数学家通常都是从非形式化论证开始的，仅在需要使论证具有说服力时才变得“严格”。我们当然也可以这样做。
+
+而且，如果我们最终能就此达成共识，那肯定也值得进行标准化。
+
+----
+## 2023-09-01， Grady Booch
+
 **From:** Grady Booch <gbooch@us.ibm.com>
 
 **Date:** Friday, September 1, 2023 at 4:01 PM
@@ -180,6 +259,21 @@ I don’t seek rigor - that is a slippery slope that ruined the UML -  but I see
 
 ----
 
+**发件人：** Grady Booch <gbooch@us.ibm.com>
+
+**日期：** 2023年9月1日 星期五 16:01
+
+**收件人：** Peter Rivett <pete.rivett@federatedknowledge.com>、Steve Cook <stevecook@hotmail.co.uk>、Ivar Jacobson <ivar@ivarjacobson.com>、分析与设计工作组 <adtf@omg.org>
+
+**主题：** 回复：UML的未来
+
+“一种简单的，更加非形式化的建模语言，供建模人员直接上手”，这正是我的意思（实际上，我就是这么使用UML的）。
+
+我并不寻求严格性 —— 那是一条毁掉 UML 的邪路 —— 我追求的只是一种方式，以便可视化、推导并记录软件密集型系统中的重要设计决策，也就是所谓的架构。
+
+
+## 2023-09-01, Peter Rivett 
+
 **From:** Peter Rivett <pete.rivett@federatedknowledge.com>
 
 **Date:** Friday, September 1, 2023 at 07:46
@@ -188,15 +282,13 @@ I don’t seek rigor - that is a slippery slope that ruined the UML -  but I see
 
 **Subject:** [EXTERNAL] Re: UML Future
 
-There seem to be two distinct perspectives on "simple": a small rigorously defined kernel or core which can be used as the foundation for building other useful modeling languages. This is represented by KerML, UML2 Infrastructure,
-
 There seem to be two distinct perspectives on "simple":
 
 *  a small rigorously defined kernel or core which can be used as the foundation for building other useful modeling languages. This is represented by KerML, UML2 Infrastructure, or the Essential ML that Ivar referenced
 
 * a simple, more informal, modeling language intended for direct use by modelers which I think is what Grady and Steve are talking about.
 
-**From what I've seen so far I don't think the rigorous kernel meets the second need by itself. An open question, for me, is whether it could be used to define the second language. My doubts are whether the target community would benefit from the rigor and whether it would be too constraining.
+From what I've seen so far I don't think the rigorous kernel meets the second need by itself. An open question, for me, is whether it could be used to define the second language. My doubts are whether the target community would benefit from the rigor and whether it would be too constraining.
 
 Another question is whether it make sense to have just one simple language or to have different simple languages focused on specific purposes such as class modeling vs function modeling vs container modeling. Having our modeling paradigm so class-centered has held back OMG as the world has moved on from OO.
 
@@ -205,6 +297,27 @@ Intellectually it would be nice if all languages were built on a common kernel a
 Pete 
 
 ----
+**发件人：** Peter Rivett <pete.rivett@federatedknowledge.com>
+
+**日期：** 2023年9月1日 星期五 07:46
+
+**收件人：** Steve Cook <stevecook@hotmail.co.uk>、Ivar Jacobson <ivar@ivarjacobson.com>、adtf@omg.org <adtf@omg.org>
+
+**主题：** [外部] 回复：UML的未来
+
+* 一种小规模且严格定义的内核（kernal）或核心（core），可以作为基础，以构建其他有用的建模语言。 其代表为：KerML、UML2 Infrastructure，或者 Ivar 提到的 Essential ML。
+
+* 一种简单的，更加非形式化的建模语言，供建模人员直接上手，我认为这就是 Grady 和 Steve 所说的意思。
+
+基于目前的情况来看，我不认为严格的内核本身能满足第二种需求。对我而言，一个悬而未决的问题是，这种严格的内核是否可以用来定义上述第二种语言。我的疑虑在于，目标社区是否会从这种严格性中受益，还是会感到过度的束缚。
+
+另一个问题是，只定义一种简单语言，还是针对特定用途定义不同的简单语言，例如类建模、函数建模、容器建模。过于以“类”为中心的建模范式，已经阻碍 了OMG 的发展，因为世界已经从“面向对象”向前迈进了。
+
+从理论上讲，如果所有语言都能构建在共同的内核之上，并且不同的模型能够集成和转换，那自然好。但这只是我内心那位元模型工程师的想法，而这有忽视用户群体实际需求的危险。
+
+Pete
+
+## 2023-09-01, Steve Cook
 
 **From:** Steve Cook <stevecook@hotmail.co.uk>
 
@@ -224,9 +337,35 @@ I’ve spent time over the past few years assessing software development apprent
 
 Power to you all.
 
-Cheers -- Steve
+Cheers 
+
+Steve
  
 ----
+
+**发件人：** Steve Cook <stevecook@hotmail.co.uk>
+
+**发送时间：** 2023年9月1日 星期五 07:56
+
+**收件人：** Ivar Jacobson <ivar@ivarjacobson.com>、adtf@omg.org <adtf@omg.org>
+
+**主题：** 回复：UML的未来
+
+既然我的名字在讨论中被提到了，我坦白，我确实有时会潜水看这些邮件。
+
+这场讨论令人欣慰 —— 修复一大堆问题来发布新版的 UML 2 看来毫无意义，但 UML 肯定有未来。
+
+我和 Ivar 的那篇文章确实提出了一些看似合理的建议，尽管它已经有些过时了（我们谁不是呢）。
+
+过去几年，我花了不少时间评估软件开发学徒，他们需要按照规定的课程大纲掌握并展示必备的知识和技能。其中就包括UML。然而，根据我与数十位学徒交流的经验，他们全都将UML作为一种不严格的草图格式来使用，通常是在敏捷流程的背景下，而且多数是基于 Scrum 的。他们绘制的对象各不相同 —— 数据、状态、类、活动。 没有一个人在做模型驱动开发。对他们来说，UML必须轻量且简单。
+
+愿大家一切顺利。
+
+祝好
+
+Steve
+
+## 2023-08-31, Ivar Jacobson
 
 **From:** Ivar Jacobson <ivar@ivarjacobson.com>
 
@@ -265,6 +404,44 @@ signature_1090897174
 NEW! - Essence for Agility
 
 ---- 
+**发件人：** Ivar Jacobson <ivar@ivarjacobson.com>
+
+**发送时间：** 2023年8月31日 星期四 21:51
+
+**收件人：** Peter Rivett <pete.rivett@federatedknowledge.com>、Sridhar Iyengar <siyengar@us.ibm.com>、Grady Booch <gbooch@us.ibm.com>、Bell, Roy M RTX <Roy.M.Bell@rtx.com>、LOGAN James <james.logan@3ds.com>
+
+**抄送：** adtf@omg.org、Mike Bennett <bennett@omg.org>
+
+**主题：** 回复：UML的未来
+
+Pete 及各位同仁，
+
+你所说的 dis-unify UML，我会表述为：识别 UML 的一个内核，即 Essential ML，并在内核之上添加不同的、甚至训在竞争关系的语言构造。
+
+这也许是受 Steve Cook 和我在 2010 年发表于 DDJ 上的那篇论文框架的启发。
+
+借用 Grady 的话来说：“你大可把我这番突发的言论当成某个心怀不满的老头随口发的牢骚”
+
+祝好
+
+Ivar
+
+Ivar Jacobson博士
+
+董事长兼CEO
+
+Ivar Jacobson International
+
++46 70 5901133
+
+www.ivarjacobson.com
+
+signature_1090897174
+
+新品速递 - Essence for Agility
+
+
+## 2023-08-31, Peter Rivett
 
 **From:** Peter Rivett <pete.rivett@federatedknowledge.com>
 
@@ -298,6 +475,36 @@ Pete
 
 ----
 
+**发件人：** Peter Rivett <pete.rivett@federatedknowledge.com>
+
+**日期：** 2023年8月31日 星期四 22:17
+
+**收件人：** Sridhar Iyengar <siyengar@us.ibm.com>、Grady Booch <gbooch@us.ibm.com>、Bell, Roy M RTX <Roy.M.Bell@rtx.com>、LOGAN James <james.logan@3ds.com>
+
+**抄送：** adtf@omg.org <adtf@omg.org>、Mike Bennett <bennett@omg.org>
+
+**主题：** 回复：UML的未来
+
+我同意 UML2 陷入了“第二系统综合征”。
+
+我看到 UML 的以下用途（及其用户，姑且这么称呼）之间的分歧日益扩大：
+
+* 建模（如 Grady 所述的场景）
+* 建模，包括形式语义、系统生成和仿真（MDA）（SysML 2 的支持者所追求的方向）
+* 专用语言（目前通过 UML Profile 实现，但也可通过将 UML 用于元模型来实现）—— 其用户最终会归入前两类阵营之一。
+
+也许我们应该聚焦于理解和满足这些迥异的需求，打破 UML 的统一(dis-unify UML)，而不是继续用一个单一且日益复杂的规范来满足所有需求。
+
+同时保留某些核心构造和表示法。
+
+我们也要认识到，外面的世界已经不再将面向对象视为唯一的开发范式。我们要摆脱那种将建模的一切都绑定到类的做法。
+
+我还可以写出更多观点 —— 但更希望大家有一个协作空间，统一构建共识，而不是零散地通过邮件沟通。
+
+Pete
+
+## 2023-08-31, Sridhar Iyengar
+
 **From:** Sridhar Iyengar <siyengar@us.ibm.com>
 
 Sent: Thursday, August 31, 2023 12:38 PM
@@ -314,7 +521,27 @@ The end product is the running app that solves real problems ; what can we (i.e.
 
 Sridhar Iyengar 
 
+---
+
+**发件人：** Sridhar Iyengar <siyengar@us.ibm.com>
+
+**发送时间：** 2023年8月31日 星期四 12:38
+
+**收件人：** Grady Booch <gbooch@us.ibm.com>、Bell, Roy M RTX <Roy.M.Bell@rtx.com>、LOGAN James <james.logan@3ds.com>
+
+**抄送：** adtf@omg.org <adtf@omg.org>
+
+**主题：** 回复：UML的未来
+
+支持 Grady 的“极简”观点，或者用我的话来说，至少是“简单且够用”。从在 2024 年及以后，解决困扰应用架构师、设计师和开发者的问题。
+
+最终产品是解决实际问题的可运行的应用；我们（也就是这个社区）现在能做些什么来让它更快、更好、且能交付价值？
+
+Sridhar Iyengar
+
 ----
+
+## 2023-08-31, Grady Booch
 
 **From:** Grady Booch <gbooch@us.ibm.com>
 
@@ -326,19 +553,14 @@ Sent: Thursday, August 31, 2023 3:13:56 PM
 
 **Subject:** [EXTERNAL] Re: UML Future
 
-> It has been written:
+It has been written:
 
->The following is a list of some goals for UML RFP that I may or may not agree with:
-
-> Migrate UML to KerML
-
-> Create a text language for UML similar to the SysML text language
-
-> Remove some features to obtain a simpler language and then migrate the remaining complex features into more powerful language(s)
-
-> Add features to UML to support functional programming
-
-> Add features to UML to support better composite data type definitions and data relations. This could be for databases, or it could be for arrays and vectors and matrices for a better mapping to MATLAB or to aid in basic deep learning algorithm descriptions, etc.
+> The following is a list of some goals for UML RFP that I may or may not agree with:
+> - Migrate UML to KerML
+> - Create a text language for UML similar to the SysML text language
+> - Remove some features to obtain a simpler language and then migrate the remaining complex features into more powerful language(s)
+> - Add features to UML to support functional programming
+> - Add features to UML to support better composite data type definitions and data relations. This could be for databases, or it could be for arrays and vectors and matrices for a better mapping to MATLAB or to aid in basic deep learning algorithm descriptions, etc.
 
 IMHO  the last thing the UML needs is more features. 2.0 is a bloated mess with warts and random appendages largely tacked on for purposes far beyond its original intent, with so many elements added to attend to model driven development (which has largely failed) and other special interests needs such that it lacks intellectual coherence and is too complex to be of any use other than by self-appointed subsets which defeats its use as a universal language. What the community truly needs is something <simple> that can be used as – and I’ll quote from 1.0 – a mechanism for visualizing and reasoning about the architecture of software-intensive systems.
 
@@ -346,7 +568,34 @@ You may dismiss my comments from out the blue as the words of some disgruntles o
 
 This – a vastly simpler UML – is something for which I could support and contribute.
 
----- 
+----
+
+**发件人：** Grady Booch <gbooch@us.ibm.com>
+
+**发送时间：** 2023年8月31日 星期四 15:13
+
+**收件人：** Bell, Roy M RTX <Roy.M.Bell@rtx.com>、LOGAN James <james.logan@3ds.com>
+
+**抄送：** adtf@omg.org <adtf@omg.org>
+
+**主题：** [外部] 回复：UML的未来
+
+如前所述：
+
+> 以下是  UML RFP 一些目标的清单，我有的同意，有的不同意：
+> - 将 UML 迁移到KerML
+> - 为 UML 创建文本语言，就像 SysML 那样
+> - 删除某些特性以获得一个更简单的语言，将其余复杂特性移至更强大的语言
+> - 为 UML 添加支持函数式编程的特性
+> - 为 UML 添加特性，以便支持更好的复合数据类型定义和数据关系。这可能用于数据库，也可能用于数组、向量和矩阵，以便更好地映射到 MATLAB，或用于描述基本的深度学习算法等。
+
+依我之见，UML最不需要的就是新增特性。2.0 版臃肿不堪，问题重重，充满随意附加的功能，其中大多远远超出了 UML 设计的初衷。为满足模型驱动开发（基本上已经失败）和其他专门的利益需求，加入了太多元素，这导致了它缺乏逻辑上的一致性且过于复杂，以致除了靠人们自行选取子集使用以外，几乎毫无用处，完全失去了作为通用语言的意义。社区真正需要的是某种“简单”的东西，让我引用 1.0 版的说法，它可以作为“一种可视化和推导软件密集型系统架构的机制”。
+
+你大可把我这番突发的言论当成某个心怀不满的老头随口发的牢骚 ，但无可否认，如今 UML 在业界仅有很小的使用规模，而业界却依然面临着当初创造这门语言所要解决的问题，甚至更加严重。
+
+为了这种极简的 UML，我愿意支持并做出贡献。
+
+## 2023-08-31, Bell, Roy 
 
 **From:** Bell, Roy M RTX <Roy.M.Bell@rtx.com>
 
@@ -390,11 +639,11 @@ The above list seems daunting. Perhaps the RFP could just tackle the first 2 ite
 
 If we think we want UML 3.0 we need to discuss how close should UML follow SysML. For example: should the UML text language adopt the keyword for “part”, or should it continue to use “class”? Another example is that SysML v2 has established a pattern for the concepts of “def” verses “usage”. Should this be adopted, or should UML continue with the similar but different concepts of “class” and “instance”? Another example is the way SysML defines interface. The UML concept of interface is more traditional and has a better mapping to Java interface or Ada spec or an IDL interface. A UML interface may not be very close to a C++ header, but it is closer than SysML interface.
  
--- Thanks,
+Thanks,
 
--- Roy
+Roy
 
--- RTX/Raytheon
+RTX/Raytheon
 
 ----
 
@@ -409,7 +658,6 @@ If we think we want UML 3.0 we need to discuss how close should UML follow SysML
 **主题：** UML的未来
 
 Jim 你好，
-
 
 
 SysML正在取得重大改进，而UML却停滞不前。我认为问题在于，不论是 UML 标准技术委员会内部，还是 OMG 整体，都没有对于下一步的发展路线达成共识。目前来看有以下几种备选方案：
@@ -449,358 +697,3 @@ SysML正在取得重大改进，而UML却停滞不前。我认为问题在于，
 Roy
 
 RTX/Raytheon 
-
----
-
-
-----
-
-**发件人：** Grady Booch <gbooch@us.ibm.com>
-**日期：** 2023年9月3日 星期日 07:20
-**收件人：** Ivar Jacobson <ivar@ivarjacobson.com>、ed-s_modeldriven.com <ed-s@modeldriven.com>、Peter Rivett <pete.rivett@federatedknowledge.com>、Steve Cook <stevecook@hotmail.co.uk>、adtf@omg.org <adtf@omg.org>
-**主题：** 回复：UML的未来
-
-“拥有一个具有深层次语义（包括静态和动态）的建模语言，与拥有一个易于使用、支持多种用例且直观可理解的建模语言之间，并无冲突。”
-
-以及
-
-“依我之见，我们必须设计一个在语义上经过深思熟虑的深度的语言，但然后只给用户他们所需的那部分，从而不只是依赖直觉。”
-
-恕我直言，Ivar，我强烈反对。而且，正是这种观点在UML走向2.0标准的过程中，助长了它的毁灭。
-
-----
-
-**发件人：** Ivar Jacobson <ivar@ivarjacobson.com>
-**日期：** 2023年9月1日 星期五 19:25
-**收件人：** ed-s_modeldriven.com <ed-s@modeldriven.com>、Grady Booch <gbooch@us.ibm.com>、Peter Rivett <pete.rivett@federatedknowledge.com>、Steve Cook <stevecook@hotmail.co.uk>、adtf@omg.org <adtf@omg.org>
-**主题：** [外部] 回复：UML的未来
-
-拥有一个具有深层次语义（包括静态和动态）的建模语言，与拥有一个易于使用、支持多种用例且直观可理解的建模语言之间，并无冲突。问题出现在当它……
-
-拥有一个具有深层次语义（包括静态和动态）的建模语言，与拥有一个易于使用、支持多种用例且直观可理解的建模语言之间，并无冲突。
-
-问题出现在当它语义贫弱，却又期望具体语法（表示法），无论简单或丰富，必须仅凭直觉就能理解时。我们有不同的直觉。
-
-依我之见，我们必须设计一个在语义上经过深思熟虑的深度的语言，但然后只给用户他们所需的那部分，从而不只是依赖直觉。
-
-这方面的一个很好的例子是Essence语言，它使用MOF规范。它是半形式的。一些构造具有形式化的定义和清晰的语义。然而，也存在已识别的语义漏洞，这些可以由用户来填补。Essence被用来描述实践，将这些实践组合成完整的方法，并借助状态进展来激活这些方法。其具体语法非常简单，使用扑克牌大小的卡片，允许用户玩许多严肃的游戏。用卡片玩游戏是一种非常流行的表示法，对Essence来说并不新鲜。新鲜的是，传统的游戏玩法所用的卡片没有定义含义，这限制了你可以玩的游戏数量，因为它们必须依赖直观理解。Essence语义的价值在于，它允许方法论者设计大量易于理解的游戏，而这些游戏在其他情况下是不可能实现的。
-
-我们构建Essence时心中有一个简单的隐喻：汽车需要引擎，但开车时你不需要了解太多引擎。实践和方法是用Essence构建的，但要使用它们，你不需要理解太多Essence。类似地，建模语言应该具有深层次但平衡的语义，但使用它时你不需要了解太多。
-
-干杯
-
---Ivar
-
-Ivar Jacobson博士
-董事长兼CEO
-Ivar Jacobson International
-+46 70 5901133
-www.ivarjacobson.com
-signature_1090897174
-新品！ - Essence for Agility
-
-----
-
-**发件人：** Ed Seidewitz <ed-s@modeldriven.com>
-**日期：** 2023年9月1日 星期五 22:23
-**收件人：** Grady Booch <gbooch@us.ibm.com>、Peter Rivett <pete.rivett@federatedknowledge.com>、Steve Cook <stevecook@hotmail.co.uk>、Ivar Jacobson <ivar@ivarjacobson.com>、adtf@omg.org <adtf@omg.org>
-**主题：** 回复：UML的未来
-
-这就是关键所在。正如我在之前的信息中指出的，也正如Pete在他的信息中更具体地阐述的那样，我们至今未能就“简单”应该是什么达成共识。
-
-我完全同意Grady的观点，一个“简单的、更非正式的建模语言”对于他的目的，以及许多其他人在软件架构建模中的目的，会非常有用。问题在于，为此定义一个OMG规范是否真的值得（或者这样做甚至可能是一种阻碍）。正如Jim Amsden所指出的，已经有模型草图工具可用，也许应该由市场来决定什么工具适合这个目的。
-
-另一方面，系统工程人员在他们将架构模型交给软件工程师时，确实在寻求某种程度的严谨性。而且，如果你想要对模型进行“推理”——即使它是传统的人工推理而非自动化推理——有一个合理的论点认为，你需要某种程度的严谨性，或者至少在你的建模构造背后有一个共享的、一致的语义，以便在对模型进行推理时能够一致地得出正确的结论。毕竟，这正是“严谨性”在数学和科学中成为重要事物的根本原因。
-
-不过，理想情况下，人们应该能够定义一种既具有严谨基础又允许非正式建模的语言。你所要做的就是当受众不在意严谨性时，不要在严谨性上过于教条。事实上，科学家甚至数学家都非常典型地从非正式论证开始，只有在必要时才变得“严谨”以使他们的论证具有说服力。我们当然也可以这样做。
-
-而且，如果我们最终能就此达成共识，那肯定也值得进行标准化。
-
-----
-
-**发件人：** Grady Booch <gbooch@us.ibm.com>
-**日期：** 2023年9月1日 星期五 16:01
-**收件人：** Peter Rivett <pete.rivett@federatedknowledge.com>、Steve Cook <stevecook@hotmail.co.uk>、Ivar Jacobson <ivar@ivarjacobson.com>、分析与设计工作组 <adtf@omg.org>
-**主题：** 回复：UML的未来
-
-“一种简单的、更非正式的、供建模者直接使用的建模语言”正是我的意思（实际上，我就是这么使用UML的）。
-
-我不寻求严谨——那是一条毁掉UML的滑坡——我寻求的只是一种用于可视化、推理和记录软件密集型系统重大设计决策——也就是架构——的手段。
-
-----
-
-**发件人：** Peter Rivett <pete.rivett@federatedknowledge.com>
-**日期：** 2023年9月1日 星期五 07:46
-**收件人：** Steve Cook <stevecook@hotmail.co.uk>、Ivar Jacobson <ivar@ivarjacobson.com>、adtf@omg.org <adtf@omg.org>
-**主题：** [外部] 回复：UML的未来
-
-关于“简单”，似乎有两种不同的观点：
-
-*   一个小的、严格定义的内核或核心，可以用作构建其他有用建模语言的基础。这由KerML、UML2 Infrastructure，或者Ivar提到的Essential ML所代表。
-
-*   一种简单的、更非正式的、供建模者直接使用的建模语言，我认为这就是Grady和Steve所讨论的。
-
-从我目前所看到的情况来看，我不认为严谨的内核本身能满足第二个需求。对我而言，一个悬而未决的问题是，它是否可以用来定义第二种语言。我的疑虑在于目标社区是否会从严谨性中受益，以及这是否会过于束缚。
-
-另一个问题是，是只定义一种简单语言，还是针对特定用途（如类建模 vs 功能建模 vs 容器建模）定义不同的简单语言。让我们的建模范式如此以类为中心，已经阻碍了OMG的发展，因为世界已经从面向对象时代向前迈进了。
-
-在智识上，如果所有语言都构建在公共内核之上，并且不同的模型可以集成和转换，那将是很好的。但这是作为元模型工程师的我在说话，这有忽视用户群体的风险。
-
-Pete
-
-----
-
-**发件人：** Steve Cook <stevecook@hotmail.co.uk>
-**发送时间：** 2023年9月1日 星期五 07:56
-**收件人：** Ivar Jacobson <ivar@ivarjacobson.com>、adtf@omg.org <adtf@omg.org>
-**主题：** 回复：UML的未来
-
-既然我的名字被引入到这个对话中，我认了，我确实有时会潜水看这些讨论。
-
-看到这场讨论在进行，我感到欣慰——修复一大堆问题来发布另一个版本的UML 2似乎毫无意义，但UML确实肯定有未来。
-
-我和Ivar的那篇文章确实提出了一些看似合理的建议，尽管它暴露了它的年代感（我们谁不是呢）。
-
-过去几年里，我花时间评估软件开发学徒，他们遵循一个必须展示的知识和技能的教学大纲。UML被包括在内。然而，根据我与数十人交谈的经验，他们都把UML用作一种不精确的草图格式，通常是在敏捷流程的背景下，多数情况下基于Scrum。他们选择草图的内容各不相同——数据、状态、类、活动。他们中没有一个人在做模型驱动开发。对他们来说，UML必须轻量级且简单。
-
-祝你们所有人一切顺利。
-
-干杯 -- Steve
-
-----
-
-**发件人：** Ivar Jacobson <ivar@ivarjacobson.com>
-**发送时间：** 2023年8月31日 星期四 21:51
-**收件人：** Peter Rivett <pete.rivett@federatedknowledge.com>、Sridhar Iyengar <siyengar@us.ibm.com>、Grady Booch <gbooch@us.ibm.com>、Bell, Roy M RTX <Roy.M.Bell@rtx.com>、LOGAN James <james.logan@3ds.com>
-**抄送：** adtf@omg.org、Mike Bennett <bennett@omg.org>
-**主题：** 回复：UML的未来
-
-Pete和各位，
-
-你们所说的使UML不统一，我会这样描述：识别UML的一个内核，即Essential ML，并在该内核之上添加不同的、可能相互竞争的语言构造。
-
-也许灵感来自Steve Cook和我在2010年发表的、刊登在DDJ上的那篇文章大纲。
-
-就像Grady说的那样：“你可以把我突然提出的这些评论，当作某个心怀不满的老人在对着云朵叫喊……”
-
-干杯
-
---Ivar
-
-Ivar Jacobson博士
-董事长兼CEO
-Ivar Jacobson International
-+46 70 5901133
-www.ivarjacobson.com
-signature_1090897174
-新品！ - Essence for Agility
-
-----
-
-**发件人：** Peter Rivett <pete.rivett@federatedknowledge.com>
-**日期：** 2023年8月31日 星期四 22:17
-**收件人：** Sridhar Iyengar <siyengar@us.ibm.com>、Grady Booch <gbooch@us.ibm.com>、Bell, Roy M RTX <Roy.M.Bell@rtx.com>、LOGAN James <james.logan@3ds.com>
-**抄送：** adtf@omg.org <adtf@omg.org>、Mike Bennett <bennett@omg.org>
-**主题：** 回复：UML的未来
-
-我同意UML 2遭受了“第二系统效应”的困扰。
-
-我看到UML的以下用途（以及用户，如果存在的话）之间的分歧日益扩大：
-
-*   建模（如Grady所言）
-*   建模，包括形式语义、系统生成和仿真（MDA）（这正是SysML 2的追随者所追求的方向）
-*   特定语言（目前通过UML Profile实现，但也将UML用于元模型）——其最终用户可能落入上述任一阵营
-
-也许我们应该专注于理解和满足这些相当不同的需求，并让UML不统一，而不是继续试图用单一、日益复杂的规范来满足所有需求。
-
-同时保留一些核心构造和表示法。
-
-我们也应该认识到，世界其他地区已经不再将面向对象视为终极目标。我们需要超越将你所建模的一切都必须附属于一个类的限制。
-
-我可以写更多——但我更希望我们有一个协作空间，在那里我们可以构建共识，而不是让输入分散在各个收件箱中。
-
-Pete
-
-----
-
-**发件人：** Sridhar Iyengar <siyengar@us.ibm.com>
-**发送时间：** 2023年8月31日 星期四 12:38
-**收件人：** Grady Booch <gbooch@us.ibm.com>、Bell, Roy M RTX <Roy.M.Bell@rtx.com>、LOGAN James <james.logan@3ds.com>
-**抄送：** adtf@omg.org <adtf@omg.org>
-**主题：** 回复：UML的未来
-
-+1 Grady，支持“极度简化”的观点，或者至少用我的话来说“简单且足够可用”，以解决2024年及以后应用架构师、设计师和开发者的问题。
-
-最终产品是解决实际问题的运行中的应用；我们（也就是这个社区）现在能做些什么来让它更快、更好、交付价值？
-
-Sridhar Iyengar
-
-----
-
-**发件人：** Grady Booch <gbooch@us.ibm.com>
-**发送时间：** 2023年8月31日 星期四 15:13
-**收件人：** Bell, Roy M RTX <Roy.M.Bell@rtx.com>、LOGAN James <james.logan@3ds.com>
-**抄送：** adtf@omg.org <adtf@omg.org>
-**主题：** [外部] 回复：UML的未来
-
-有人写道：
-
-以下是一些我可能同意也可能不同意的UML RFP目标清单：
-
-1. 将UML迁移到KerML
-2. 为UML创建类似于SysML文本语言的文本语言
-3. 移除一些特性以获得更简单的语言，然后将剩余的复杂特性迁移到更强大的语言中
-4. 为UML添加特性以支持函数式编程
-5. 为UML添加特性以支持更好的复合数据类型定义和数据关系。这可能针对数据库，也可能是针对数组、向量和矩阵，以便更好地映射到MATLAB，或帮助进行基本的深度学习算法描述等。
-6. 为UML添加任何必要特性以更好地支持本体描述
-
-依我之见，UML最不需要的就是更多特性。2.0是一团有瑕疵和随机附属物的臃肿乱麻，很大程度上是为了超出其最初意图的目的而随意添加的，加入了太多元素来迎合模型驱动开发（这基本上已经失败了）和其他特殊利益需求，以至于它缺乏智识上的一致性，过于复杂而毫无用处，除了那些自行指定的子集——但这又破坏了它作为通用语言的用途。社区真正需要的是一种<简单的>东西，可以像——我引用1.0的话——一种“可视化与推理软件密集型系统架构的机制”那样来使用。
-
-你可以把我突然提出的这些评论，当作某个心怀不满的老人在对着云朵叫喊，但你不能否认，如今UML在业界仅有极少的使用，而那个业界仍然面临着——甚至更甚——这门语言最初被创造出来所要解决的问题。
-
-这个——一个极度简化的UML——是我可以支持和贡献的方向。
-
-
-
-
-=====
-
-
-### 上一封：格雷迪·布奇 2023-09-03 07:20
-主题：回复：UML的未来
-> 一套建模语言既可以具备完备的静态、动态深层形式语义，同时做到简单易用，适配多场景、直观易懂，二者并不冲突。
-> 我的观点：我们设计语言时，应当精心打磨底层完备语义，但面向使用者，仅开放他们所需的最小子集，不单纯依靠直觉解读模型。
-
-恕我直言，艾瓦尔，我强烈反对这套观点。恰恰是这种思路，让UML在迭代至2.0的过程中彻底走偏。
-
----
-### 上一封：艾瓦尔·雅各布森 2023-09-01 19:25 外部邮件
-主题：回复：UML的未来
-一套建模语言既可以具备完备的静态、动态深层形式语义，同时做到简单易用、适配多场景、直观易懂，二者并不冲突。
-矛盾只会出现在一种情况：语言底层语义残缺，却要求无论繁简的图形语法都能仅凭直觉看懂。毕竟每个人的直觉判断标准各不相同。
-
-在我看来，设计语言必须搭建一套经过严谨设计的深层语义体系，但面向使用者，仅开放业务所需的最小语义子集，不能只靠直觉理解模型。
-
-Essence规范就是典型范例，该规范基于MOF定义，属于半形式化体系：部分语法构件拥有严谨清晰的形式语义，同时预留可由使用者自行补充的语义空白。Essence用于定义研发实践、组合完整开发方法、依托状态演进驱动流程落地。它的图形语法极其简洁，采用扑克牌大小的卡片载体，支撑各类严肃工程推演。卡片推演建模并非Essence首创，传统卡片推演工具没有标准化语义，可推演场景十分有限，完全依赖使用者直觉。而Essence标准化语义的价值，是支撑方法论专家设计出大量易懂、可落地的推演方案，这在以往根本无法实现。
-
-我们设计Essence时遵循一个通俗类比：汽车离不开发动机，但驾驶员无需精通发动机原理。大家基于Essence搭建开发流程与方法，使用者却不必吃透Essence底层规范。同理，建模语言应当拥有完整均衡的底层语义，但普通使用者无需掌握全部底层细节。
-
-祝好
-——艾瓦尔
-
----
-### 上一封：埃德·赛德维茨 2023-09-01 22:23
-主题：回复：UML的未来
-分歧的核心卡点就在这里。我此前邮件提过，彼得的阐述也更加具体：至今我们始终无法对“轻量化”的定义达成统一共识。
-
-我完全认同格雷迪：一套轻量化、弱形式化的建模语言，对软件架构设计场景价值巨大，大量从业者都有这类需求。但关键争议在于：是否有必要为这类场景单独制定OMG官方标准，甚至标准化反而会形成阻碍？正如吉姆·阿姆斯特登所说，市面上已有大量草图建模工具，或许这类轻量化场景应当交由市场工具自由发展。
-
-但另一方面，系统工程师在将架构模型交付软件团队时，确实需要一定程度的严谨性。如果希望基于模型开展逻辑推导——哪怕是人工推导而非自动化验证——合理的结论是：建模构件必须具备统一、公认的标准化语义，才能稳定推导出正确结论。归根结底，严谨性本身就是数学与科学体系建立的根基。
-
-理想状态下，一套语言可以同时兼顾严谨底层基础与轻量化非正式建模。只需要在面向非专业受众时，不必教条式强制使用完整形式语义。科学家、数学家日常研究也是先通过非正式推导梳理思路，仅在需要佐证结论时才补充严谨证明，建模语言完全可以借鉴这套思路。
-
-如果我们能就此达成共识，这套轻量化语言就值得推进标准化。
-
----
-### 上一封：格雷迪·布奇 2023-09-01 16:01
-主题：回复：UML的未来
-我所说的“轻量化、弱形式化、建模者可直接上手使用的建模语言”，正是我的核心诉求，也是我日常使用UML的真实方式。
-
-我并不追求极致形式化严谨——这条路径一步步拖垮了UML。我只需要一套工具，用于可视化、逻辑推导、记录软件密集型系统核心设计决策，也就是系统架构。
-
----
-### 上一封：彼得·里维特 2023-09-01 07:46 外部邮件
-主题：回复：UML的未来
-业内对“轻量化”存在两种完全不同的理解视角：
-1. 极简、严谨定义的内核/核心元模型，作为各类建模语言的底层基座，代表方案：KerML、UML2基础设施层、艾瓦尔提到的Essence ML；
-2. 轻量化、弱化形式化、建模者直接使用的成品语言，也就是格雷迪、史蒂夫讨论的方向。
-
-结合目前的讨论来看，纯严谨内核无法直接满足第二类轻量化使用场景。我存疑的关键点：这套内核能否衍生出第二类轻量化语言？衍生后的标准是否能给终端使用者带来收益，还是会过度束缚建模表达？
-
-另一项争议：我们应当只打造一套通用轻量化语言，还是针对细分场景分别设计专用轻量化语言（类建模、功能建模、容器建模）？长期以来OMG建模体系过度以面向对象类为核心，可行业早已跳出纯面向对象思维，这一点限制了标准发展。
-
-从元建模研究者的视角，理想方案是所有语言复用同一套底层内核，不同模型之间可互通、转换。但这种思路很容易脱离普通使用者的真实需求。
-
-彼得
-
----
-### 上一封：史蒂夫·库克 2023-09-01 07:56
-主题：回复：UML的未来
-既然我的名字出现在讨论列表里，我也谈谈看法，我平时常会关注这类行业讨论。
-
-这场讨论很有意义：单纯修复UML 2几百个缺陷、迭代新版本没有实质意义，但UML行业确实还有发展空间。
-
-我和艾瓦尔早年联合发表的文章给出过可行思路，只是观点距今已有一定时间。
-
-过去几年我持续带教软件实训新人，他们有一套标准化必修知识体系，UML是其中必修内容。和数十名新人沟通后我发现：所有人都只把UML当成不严谨的草图工具，大多搭配Scrum敏捷流程，绘制内容涵盖数据、状态、类、活动图，没有任何人落地模型驱动开发。对他们而言，UML必须足够轻量、简单。
-
-祝各位一切顺利
-——史蒂夫
-
----
-### 上一封：艾瓦尔·雅各布森 2023-08-31 21:55
-主题：回复：UML的未来
-彼得、各位同仁：
-你所说的“拆分UML体系”，我的表述是：提炼UML核心内核Essence ML，在内核之上扩展多套可并行、甚至存在竞争关系的建模语法。
-
-这套思路的雏形，可以参考我和史蒂夫2010年发表于《DDJ》杂志的论文。
-
-借用格雷迪的原话：“你们大可把我的观点当成某个满腹牢骚的老头随口发牢骚……”
-
-祝好
-——艾瓦尔
-
----
-### 上一封：彼得·里维特 2023-08-31 22:17
-主题：回复：UML的未来
-我认同UML 2陷入了**第二系统综合征**（过度设计、功能堆砌）。
-
-当下UML使用者分化成三类完全独立的需求群体：
-1. 架构草图建模（格雷迪代表的使用场景）；
-2. 带完整形式语义、支撑代码生成与仿真的模型驱动开发（MDA，SysML 2技术路线的目标）；
-3. 领域专用建模语言（当前基于UML概要文件扩展，也可用UML构建元模型），这类用户最终会归到前两类场景之一。
-
-与其继续用一套越来越复杂的标准强行承载所有需求，不如梳理、满足三类差异化诉求，拆分UML体系，同时保留通用核心构件与图形语法。
-
-我们还要认清现实：行业早已不再把面向对象当作唯一开发范式，建模体系不能所有元素都强行绑定“类”。
-
-我还有很多观点想展开，但更希望搭建协同讨论空间，统一梳理共识，而非所有人零散单独发邮件沟通。
-
-彼得
-
----
-### 上一封：斯里达尔·艾扬格 2023-08-31 12:38
-主题：回复：UML的未来
-我完全认同格雷迪，需要一套大幅简化、好用够用的标准，服务2024年及以后应用架构师、设计人员、开发人员。
-
-软件最终交付的是可运行、解决真实业务的程序。我们建模社区当下能做什么，才能让开发更快、质量更好、交付更多价值？
-
-斯里达尔·艾扬格
-
----
-### 上一封：格雷迪·布奇 2023-08-31 15:13 外部邮件
-有人整理了UML新版需求提案（RFP）的待办目标，部分我认同、部分不认同：
-1. 将UML迁移至KerML内核；
-2. 对标SysML文本语法，为UML设计原生文本语言；
-3. 删减冗余功能，打造轻量化核心语言，复杂高级能力拆分至独立专用标准；
-4. 新增函数式编程建模支持；
-5. 完善复合数据类型与数据关系定义，适配数据库、矩阵向量运算，方便对接MATLAB、基础深度学习算法描述；
-6. 新增本体论建模相关能力。
-
-在我看来，UML当下最不需要的就是新增功能。UML 2.0臃肿繁杂，大量功能是为超出原始定位的场景强行堆砌，为适配模型驱动开发（该路线行业落地效果极差）、各类小众定制需求叠加无数构件，导致整体理论逻辑断裂。如今只能靠从业者自行截取子集使用，彻底失去通用建模语言的意义。行业真正需要一套轻量化标准——引用UML 1.0原文：作为可视化、推导软件密集型系统架构的工具。
-
-你们可以觉得我这番话只是一个老人无端抱怨，但无法否认：如今UML在工业界实际落地规模极小，可行业最初创造UML想要解决的架构问题，如今反而愈发突出。
-
-这套极致轻量化的UML标准，我愿意全力支持、参与共建。
-
-
-
-## 关键术语注释
-1. Second System Syndrome：第二系统综合征，软件架构经典概念，指二代产品过度堆砌功能、过度设计
-2. MDA：模型驱动架构，OMG早期模型工业化开发路线
-3. RFP：标准需求提案，OMG发起新版标准的官方流程
-4. RTF：标准修订工作组，负责标准缺陷修复、小幅迭代
-5. Essence / KerML / SysML v2：OMG三代建模核心规范
-6. Profile：UML概要文件，传统领域扩展机制
-7. MOF：元对象设施，OMG元建模底层标准
-
